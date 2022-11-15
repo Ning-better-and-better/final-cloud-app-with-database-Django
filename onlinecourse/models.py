@@ -107,7 +107,7 @@ class Question(models.Model):
     q_toint = models.IntegerField(default=1) # question grade/mark
 
     def __str__(self):
-        return self.question_text
+        return self.q_text
     # <HINT> A sample model method to calculate if learner get the score of the question
     def is_get_score(self, selected_ids):
         all_answers = self.choice_set.filter(is_correct=True)
